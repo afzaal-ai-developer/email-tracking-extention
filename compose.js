@@ -12,10 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('You are not connected to your Google account. Please connect first.');
       return;
     }
-
-    const trackingId = Date.now().toString();
-    const trackingPixelUrl = `https://YOUR_NETLIFY_URL/.netlify/functions/tracker?trackingId=${trackingId}`;
-    const trackedMessage = `${message}<img src="${trackingPixelUrl}" width="1" height="1" />`;
+const trackingId = Date.now().toString();
+const trackingPixelUrl = `https://email-tracking-e.netlify.app/.netlify/functions/tracker?trackingId=${trackingId}`;
+const trackedMessage = `${message}<img src="${trackingPixelUrl}" width="1" height="1" />`;
 
     const email = [
       'Content-Type: text/html; charset="UTF-8"',
