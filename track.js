@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         sentAtCell.textContent = new Date(email.timestamp).toLocaleString();
         if (email.trackingId) {
           // Replace with your actual Netlify URL
-          const netlifyFunctionUrl = `https://YOUR_NETLIFY_URL/.netlify/functions/tracker-status?trackingId=${email.trackingId}`;
+  const netlifyFunctionUrl = `https://email-tracking-e.netlify.app/.netlify/functions/tracker-status?trackingId=${email.trackingId}`;
           fetch(netlifyFunctionUrl)
             .then(response => response.json())
             .then(data => {
